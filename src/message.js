@@ -70,7 +70,7 @@ module.exports.buildHave = payload => {
 };
 
 module.exports.buildBitfield = bitfield => {
-  const buf = Buffer.alloc(14);
+  const buf = Buffer.alloc(bitfield.length + 1 + 4);
   // length
   buf.writeUInt32BE(payload.length + 1, 0);
   // id
